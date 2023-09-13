@@ -14,10 +14,10 @@
                   <label for="name" class="col-form-label">Name:</label>
                 </div>
                 <div class="col-auto">
-                  <input type="text" id="name" class="form-control" aria-describedby="nameHelpInline">
+                  <input type="text" id="name" aria-describedby="nameHelpInline">
                 </div>
                 <div class="col-auto">
-                  <span class="form-text"><p id="nameAlert"></p></span>
+                  <span class="form-text" id="nameAlert" style="color: red;"></span>
                 </div>
             </div>
             
@@ -26,10 +26,10 @@
                   <label for="email" class="col-form-label">Email: </label>
                 </div>
                 <div class="col-auto">
-                  <input type="email" id="email" class="form-control" aria-describedby="emailHelpInline">
+                  <input type="email" id="email" aria-describedby="emailHelpInline">
                 </div>
                 <div class="col-auto">
-                  <span id="emailAlert" class="form-text"></span>
+                  <span id="emailAlert" class="form-text" style="color: red;"></span>
                 </div>
               </div>
 
@@ -38,10 +38,10 @@
                   <label for="website" class="col-form-label">Website: </label>
                 </div>
                 <div class="col-auto">
-                  <input type="text" id="website" class="form-control" aria-describedby="websiteHelpInline">
+                  <input type="text" id="website" aria-describedby="websiteHelpInline">
                 </div>
                 <div class="col-auto">
-                  <span id="websiteAlert" class="form-text"></span>
+                  <span id="websiteAlert" class="form-text" style="color: red;"></span>
                 </div>
               </div>
 
@@ -50,38 +50,18 @@
                   <label for="message" class="col-form-label">Message: </label>
                 </div>
                 <div class="col-auto">
-                    <textarea name="msg" id="message" cols="22" rows="3" class="form-control" aria-describedby="msgHelpInline"></textarea>
+                    <textarea name="msg" id="message" cols="22" rows="3" aria-describedby="msgHelpInline"></textarea>
                 </div>
                 <div class="col-auto">
-                  <span id="messageAlert" class="form-text"></span>
+                  <span id="messageAlert" class="form-text" style="color: red;"></span>
                 </div>
               </div>
+
+              <h6 class="mt-5" style="color: #a5a5a5;">Click the input field to see alert</h6>
         </div>
     </body>
     <style>
         label,input,textarea{margin-top: 10px;}
     </style>
-    <script>
-        const body = document.querySelector('body');
-
-            function check() {
-                var nameIn = document.getElementById("name").value
-                var nameAl = document.getElementById("nameAlert")
-                var emailIn = document.getElementById("email")
-                var emailAl = document.getElementById("emailAlert")
-                var websiteIn = document.getElementById("website")
-                var websiteAl = document.getElementById("websiteAlert")
-                var message = document.getElementById("message")
-                var messageAl = document.getElementById("messageAlert")
-                console.log(nameIn)
-                if(nameIn == ""){
-                    console.log("nameIn")
-                    nameIn.style.margin = "10px"
-                    nameIn.style.backgroundColor = "red"
-                    nameAl.innerHTML = `<span style="color: red;">This field is required</span>`
-                }
-            }
-
-            body.onload = check;
-    </script>
+    <script src="jsTask5.js"></script>
 </html>
